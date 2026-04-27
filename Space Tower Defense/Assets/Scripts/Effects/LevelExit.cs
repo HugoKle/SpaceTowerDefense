@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class LevelExit : MonoBehaviour
+{
+    public Animator transition;
+
+    [SerializeField] Level level;
+    [SerializeField] float transitionTime;
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            StartLevelCoroutine(level);
+        }
+    }
+    public IEnumerator LoadLevel(Level level)
+    {
+        transition.SetTrigger("start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        Debug.Log(gameObject.name + " loading: " + level + " (" + (int)level + ")");
+        UnityEngine.SceneManagement.SceneManager.LoadScene((int)level);
+    }
+
+    public void StartLevelCoroutine(Level level)
+    {
+        StartCoroutine(LoadLevel(level));
+    }
+
+}

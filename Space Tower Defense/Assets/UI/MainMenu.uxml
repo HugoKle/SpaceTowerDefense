@@ -1,0 +1,6 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="StartScreen" src="project://database/Assets/UI/StartScreen.uxml?fileID=9197481963319205126&amp;guid=03f2313c8a5457b40ac06185ea6ae528&amp;type=3#StartScreen" />
+    <ui:Template name="Settings" src="project://database/Assets/UI/Settings.uxml?fileID=9197481963319205126&amp;guid=b12766c5fde484547828b788b919b78c&amp;type=3#Settings" />
+    <ui:Instance template="StartScreen" name="MainMenu" style="height: 100%; width: 100%; position: absolute;" />
+    <ui:Instance template="Settings" name="SettingsMenu" style="display: none; position: absolute; align-self: center;" />
+</ui:UXML>

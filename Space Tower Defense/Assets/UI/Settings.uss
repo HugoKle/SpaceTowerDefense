@@ -1,0 +1,32 @@
+:root {
+}
+
+.Toggle {
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    -unity-font-definition: url("project://database/Assets/Fonts/Ethnocentric-Regular.otf?fileID=12800000&guid=2c0cd0875eeb63a4f94964ecd9c69456&type=3#Ethnocentric-Regular");
+}
+
+.Slider {
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    width: 500px;
+    -unity-font-definition: url("project://database/Assets/Fonts/Ethnocentric-Regular.otf?fileID=12800000&guid=2c0cd0875eeb63a4f94964ecd9c69456&type=3#Ethnocentric-Regular");
+}
+
+.Button:hover {
+    transition-duration: 0.2s;
+    scale: 1.1 1.1;
+}
+
+.Button:active {
+    scale: 0.9 0.9;
+}
