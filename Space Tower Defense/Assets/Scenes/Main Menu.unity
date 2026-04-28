@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Levelloader
       objectReference: {fileID: 0}
+    - target: {fileID: 6472504992758874476, guid: dfe7f4564105f9346bcd1257989826fd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2c5a624bf7d91c54093e647fcee82352, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

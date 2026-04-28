@@ -1,0 +1,40 @@
+:root {
+}
+
+.Button {
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    width: 100px;
+    position: relative;
+    bottom: 2px;
+    background-image: url("project://database/Assets/Sprites/UI/HotbarBG.png?fileID=2800000&guid=d9c2652fcc84d164fb02dbd6ac5d61dd&type=3#HotbarBG");
+    color: rgba(27, 27, 27, 0);
+    -unity-background-image-tint-color: rgb(159, 159, 159);
+    border-left-color: rgb(180, 180, 180);
+    border-right-color: rgb(180, 180, 180);
+    border-top-color: rgb(180, 180, 180);
+    border-bottom-color: rgb(180, 180, 180);
+}
+
+.Button:hover {
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    transition-duration: 0.1s;
+}
+
+.TowerVisual {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -unity-background-image-tint-color: rgb(144, 144, 144);
+    opacity: 1;
+}
+
+.TowerVisual:hover {
+    transition-duration: 0.1s;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}

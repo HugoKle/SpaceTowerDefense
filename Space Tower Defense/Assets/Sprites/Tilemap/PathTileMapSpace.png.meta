@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 420171b52eb7b0c4bac97d11ee8d3cc4
+guid: cdfb44a04d9d7d341b91231dea3196ea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2230135982743875917
-    second: SpacePathTile 1_0
+      213: 7253989360657659302
+    second: PathTileMapSpace_0
+  - first:
+      213: 3958451316927246941
+    second: PathTileMapSpace_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,11 +116,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpacePathTile 1_0
+      name: PathTileMapSpace_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -128,18 +131,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d41f34c4cd803fe10800000000000000
-      internalID: 2230135982743875917
+      spriteID: 6a57676e3e85ba460800000000000000
+      internalID: 7253989360657659302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpacePathTile 1_1
+      name: PathTileMapSpace_1
       rect:
         serializedVersion: 2
         x: 32
-        y: 64
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d52302eff7e3fe630800000000000000
+      internalID: 3958451316927246941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PathTileMapSpace_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -150,18 +175,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27020fbd184c1b141afae7191fffc31f
-      internalID: 1857987559
+      spriteID: 10935737d26f1d94abf49e9332a624ed
+      internalID: 629842929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpacePathTile 1_2
+      name: PathTileMapSpace_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa0e5ab4ab21ab478a6d4c264cd3ae5
+      internalID: 957218628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PathTileMapSpace_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -172,18 +219,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c490df1697c23794abab0be8d9c8c030
-      internalID: -1884400510
+      spriteID: 6cc223c4b8587d6499b22af04386e324
+      internalID: -767506996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpacePathTile 1_3
+      name: PathTileMapSpace_5
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -194,18 +241,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e88856ba38264bb47bacc8204a1a3481
-      internalID: -869776150
+      spriteID: f713921a4add31b46a0e4ff746f53f9a
+      internalID: 1490697741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpacePathTile 1_4
+      name: PathTileMapSpace_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb7015aac594414d97d014ef2f194bf
+      internalID: -1962330797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PathTileMapSpace_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0eb0eae4bd95874c9b343315caea5fe
+      internalID: 202659054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PathTileMapSpace_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -216,18 +307,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aea9814aedd529c4bb704c2590283d7f
-      internalID: 289965762
+      spriteID: 607a708ffd90e3744b21a8258711f4f9
+      internalID: 1003655341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpacePathTile 1_5
+      name: PathTileMapSpace_9
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -238,8 +329,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ef182d8136a60a49b3a525ead1008f4
-      internalID: 1631321547
+      spriteID: 9257519688d59174da8ed87cb37a576a
+      internalID: -10085249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PathTileMapSpace_10
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62911669104348a4bbd145fd7f4c47c6
+      internalID: -1957620273
       vertices: []
       indices: 
       edges: []
@@ -248,7 +361,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6000b8758f86003448e3df29e8020862
+    spriteID: d888c4f2daeb5d943bb2901870932173
     internalID: 0
     vertices: []
     indices: 
@@ -260,12 +373,17 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      SpacePathTile 1_0: 2230135982743875917
-      SpacePathTile 1_1: 1857987559
-      SpacePathTile 1_2: -1884400510
-      SpacePathTile 1_3: -869776150
-      SpacePathTile 1_4: 289965762
-      SpacePathTile 1_5: 1631321547
+      PathTileMapSpace_0: 7253989360657659302
+      PathTileMapSpace_1: 3958451316927246941
+      PathTileMapSpace_10: -1957620273
+      PathTileMapSpace_2: 629842929
+      PathTileMapSpace_3: 957218628
+      PathTileMapSpace_4: -767506996
+      PathTileMapSpace_5: 1490697741
+      PathTileMapSpace_6: -1962330797
+      PathTileMapSpace_7: 202659054
+      PathTileMapSpace_8: 1003655341
+      PathTileMapSpace_9: -10085249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

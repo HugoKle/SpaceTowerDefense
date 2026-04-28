@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="Hotbar" src="project://database/Assets/UI/Hotbar.uxml?fileID=9197481963319205126&amp;guid=502a1da79876a984c821b7ddd9b88ff4&amp;type=3#Hotbar" />
+    <Style src="project://database/Assets/UI/UI.uss?fileID=7433441132597879392&amp;guid=6b0a9da0bc171b94ca8fef71b64679ef&amp;type=3#UI" />
+    <ui:Instance template="Hotbar" name="Basic" style="position: absolute; align-self: center; bottom: 0;" />
+    <ui:Instance template="Hotbar" name="Specials" style="position: absolute; bottom: 0; align-self: center;" />
+    <ui:Button text="&#10;" name="Swap" style="height: 70px; width: 70px; align-self: flex-end; position: absolute; bottom: 86px; right: 510px; border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; border-left-color: rgb(236, 113, 249); border-right-color: rgb(236, 113, 249); border-top-color: rgb(236, 113, 249); border-bottom-color: rgb(236, 113, 249); background-image: url(&quot;project://database/Assets/Sprites/UI/SwapButton.png?fileID=2800000&amp;guid=acd47d4f03d3912449496c0b265b0445&amp;type=3#SwapButton&quot;); background-size: 75% 75%;" />
+</ui:UXML>

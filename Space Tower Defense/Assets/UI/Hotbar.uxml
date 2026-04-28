@@ -1,0 +1,26 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UI.uss?fileID=7433441132597879392&amp;guid=6b0a9da0bc171b94ca8fef71b64679ef&amp;type=3#UI" />
+    <ui:VisualElement name="Hotbar" style="flex-grow: 1; max-height: 120px; height: 120px; min-height: 120px; position: absolute; bottom: 38px; width: 777px; border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-left-color: rgb(236, 113, 249); border-right-color: rgb(236, 113, 249); border-top-color: rgb(236, 113, 249); border-bottom-color: rgb(236, 113, 249); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; left: auto; flex-direction: row; background-color: rgb(236, 113, 249); align-self: center;">
+        <ui:Button text="Button" name="Tower1" class="Button">
+            <ui:VisualElement name="TowerVisual1" class="TowerVisual" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/UI/Mercury.png?fileID=2800000&amp;guid=ea0fb5b0b33a7bf4f800fed536cdd608&amp;type=3#Mercury&quot;); background-size: 100% 70%;" />
+        </ui:Button>
+        <ui:Button text="Button" name="Tower2" class="Button">
+            <ui:VisualElement name="TowerVisual2" class="TowerVisual" style="flex-grow: 1;" />
+        </ui:Button>
+        <ui:Button text="Button" name="Tower3" class="Button">
+            <ui:VisualElement name="TowerVisual3" class="TowerVisual" style="flex-grow: 1;" />
+        </ui:Button>
+        <ui:Button text="Button" name="Tower4" class="Button">
+            <ui:VisualElement name="TowerVisual4" class="TowerVisual" style="flex-grow: 1;" />
+        </ui:Button>
+        <ui:Button text="Button" name="Tower5" class="Button">
+            <ui:VisualElement name="TowerVisual5" class="TowerVisual" style="flex-grow: 1;" />
+        </ui:Button>
+        <ui:Button text="Button" name="Tower6" class="Button">
+            <ui:VisualElement name="TowerVisual6" class="TowerVisual" style="flex-grow: 1;" />
+        </ui:Button>
+        <ui:Button text="Button" name="Tower7" class="Button">
+            <ui:VisualElement name="TowerVisual7" class="TowerVisual" style="flex-grow: 1;" />
+        </ui:Button>
+    </ui:VisualElement>
+</ui:UXML>
