@@ -38,3 +38,9 @@
     transition-duration: 0.1s;
     -unity-background-image-tint-color: rgb(255, 255, 255);
 }
+
+.Text {
+    font-size: 75px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+}

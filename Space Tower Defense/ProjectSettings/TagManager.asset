@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 3
   tags:
   - Point
+  - EnemySpawn
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Path
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
