@@ -4,18 +4,7 @@ using UnityEngine;
 public class ShakeManager : MonoBehaviour
 {
    public static ShakeManager Instance { get; private set; }
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
+   
 
     public void ShakeCamera(float duration, float intensity)
     {

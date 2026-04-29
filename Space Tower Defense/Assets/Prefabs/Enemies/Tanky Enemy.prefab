@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1239827118467742907}
   - component: {fileID: 1195818873999547550}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: Tanky Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.36182025, g: 0.5660378, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -105,8 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a093d36ad84c7b849a17a5a2ff5d2675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 2
-  damage: 1
+  speed: 1
+  damage: 5
 --- !u!50 &1239827118467742907
 Rigidbody2D:
   serializedVersion: 5

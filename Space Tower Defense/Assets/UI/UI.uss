@@ -32,15 +32,19 @@
     right: 0;
     -unity-background-image-tint-color: rgb(144, 144, 144);
     opacity: 1;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: 100% 70%;
 }
 
 .TowerVisual:hover {
     transition-duration: 0.1s;
     -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .Text {
     font-size: 75px;
     color: rgb(255, 255, 255);
-    -unity-font-style: bold;
+    -unity-font-style: normal;
+    -unity-font-definition: url("project://database/Assets/Fonts/Ethnocentric-Regular.otf?fileID=12800000&guid=2c0cd0875eeb63a4f94964ecd9c69456&type=3#Ethnocentric-Regular");
 }

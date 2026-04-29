@@ -24,12 +24,23 @@ public class WaveScript : MonoBehaviour
     {
         while (true)
         {
+            
+
             yield return null;
             yield return new WaitUntil(() => !isWaveActive);
+
+            if (currentWaveIndex != 0)
+            {
+                gameUI.AddMoney(waves[currentWaveIndex - 1].endOfRoundReward);
+            }
+
+            if (currentWaveIndex >= waves.Length) { break; }
+
             yield return new WaitForSeconds(2f);
             StartCoroutine(SpawnWave(currentWaveIndex));
             currentWaveIndex++;
         }
+        Debug.Log("You Win");
     }
 
     IEnumerator SpawnWave(int waveIndex)

@@ -16,7 +16,7 @@
     -unity-text-outline-width: 0;
     -unity-text-outline-color: rgb(243, 226, 49);
     text-shadow: 2px 2px 5px rgb(255, 255, 255);
-    -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=5c66a61818a9bde4e8708378f0216ad9&type=3#NotInter-Regular");
+    -unity-font-definition: url("project://database/Assets/Fonts/Ethnocentric-Regular.otf?fileID=12800000&guid=2c0cd0875eeb63a4f94964ecd9c69456&type=3#Ethnocentric-Regular");
     border-top-width: 3px;
     border-right-width: 3px;
     border-bottom-width: 3px;

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3512801312091991670}
   - component: {fileID: 467689491507160968}
-  - component: {fileID: 1825727937098523616}
   m_Layer: 0
   m_Name: EnemySummon
   m_TagString: EnemySpawn
@@ -91,15 +90,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1825727937098523616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1482499042075200678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef9727ae73572b34b916529184c5bd87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
