@@ -10,7 +10,7 @@ public class BlinkBG : MonoBehaviour
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        randomDelay = Random.Range(0, 100);
+        randomDelay = Random.Range(1, 101);
     }
 
     // Update is called once per frame

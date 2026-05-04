@@ -8,15 +8,18 @@ public class UIScript : MonoBehaviour
     Label moneyLabel;
     Label waveLabel;
 
-    [SerializeField] Tower[] towers;
+    [SerializeField] public Tower[] towers;
+    [SerializeField] int startingCash;
 
     List<Button> towerSlots = new List<Button>();
+    TowerController towerController;
 
     private UIDocument _document;
     DamageVignette damageVignette;
 
     VisualElement specialHotbar;
     VisualElement mainHotbar;
+    
 
     private void Awake()
     {
@@ -25,6 +28,8 @@ public class UIScript : MonoBehaviour
 
     private void Start()
     {
+        towerController = FindFirstObjectByType<TowerController>();
+
         VisualElement root = _document.rootVisualElement;
         healthLabel = root.Q<Label>("Health");
         moneyLabel = root.Q<Label>("Money");
@@ -32,9 +37,23 @@ public class UIScript : MonoBehaviour
         mainHotbar = root.Q<VisualElement>("Basic");
         specialHotbar = root.Q<VisualElement>("Specials");
         Button swapButton = root.Q<Button>("Swap");
+       
 
         specialHotbar.style.display = DisplayStyle.None;
 
+        AssignSlots();
+
+
+        swapButton.RegisterCallback<ClickEvent>(evt => SwapTowers());
+
+        AddMoney(startingCash);
+
+
+
+    }
+
+    void AssignSlots()
+    {
         for (int i = 1; i <= 14; i++)
         {
             Button currentSlot;
@@ -52,17 +71,27 @@ public class UIScript : MonoBehaviour
 
             if (currentSlot == null) { Debug.LogWarning($"Tower{i} not found"); continue; }
 
-            
+
             towerIcon.style.backgroundImage = towers[i - 1].towerIcon;
 
             towerSlots.Add(currentSlot);
-            
+
+            int index = i - 1; 
+            currentSlot.RegisterCallback<ClickEvent>(evt => OnTowerSlotClicked(index));
+
         }
-
-
-        swapButton.RegisterCallback<ClickEvent>(evt => SwapTowers());
-
     }
+
+    void OnTowerSlotClicked(int index)
+    {
+        Debug.Log($"Clicked slot {index}, tower: {towers[index].towerName}");
+        if (towerController == null)
+        {
+            towerController = FindFirstObjectByType<TowerController>();
+        }
+        towerController.PlaceTower(towers[index].towerPrefab, index);
+    }
+
 
     bool isShowingBasic = true;
     void SwapTowers()
@@ -108,9 +137,9 @@ public class UIScript : MonoBehaviour
     {
         if (moneyLabel != null)
         {
-            int currentMoney = int.Parse(moneyLabel.text);
+            int currentMoney = int.Parse(moneyLabel.text.Replace("$", ""));
             currentMoney += amount;
-            moneyLabel.text = currentMoney.ToString();
+            moneyLabel.text = "$" + currentMoney.ToString();
         }
     }
 
@@ -118,7 +147,7 @@ public class UIScript : MonoBehaviour
     {
         if (moneyLabel != null)
         {
-            int currentMoney = int.Parse(moneyLabel.text);
+            int currentMoney = int.Parse(moneyLabel.text.Replace("$", ""));
             return currentMoney;
         }
         return 0;

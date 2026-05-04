@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "TowerController",
+    "maps": [
+        {
+            "name": "TowerController",
+            "id": "9eb758f8-eb20-49ff-99a3-373c6a4902ae",
+            "actions": [
+                {
+                    "name": "PlaceTower",
+                    "type": "Button",
+                    "id": "79fdd328-a650-482f-945a-866878786e60",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CancelPlacement",
+                    "type": "Button",
+                    "id": "2a3949d0-5e60-4f8a-8ff2-57160762616f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8940043d-3430-4ce0-b0dd-c2809023dba7",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlaceTower",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "071b56f7-6602-4816-bf4a-58033306a346",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CancelPlacement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

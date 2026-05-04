@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 8988590617706095488}
   - component: {fileID: 1239827118467742907}
   - component: {fileID: 1195818873999547550}
+  - component: {fileID: -1900698279607286520}
   m_Layer: 6
   m_Name: Tanky Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,7 +165,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -180,3 +181,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-1900698279607286520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473683109206019041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f617cb8e5e83da448bf552f991e04be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  maxHealth: 20
+  value: 50
