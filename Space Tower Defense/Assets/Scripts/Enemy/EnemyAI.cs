@@ -5,10 +5,11 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float speed = 2f;
     [SerializeField] int damage = 1;
 
-
+    public float distanceTravelled = 0f;
     Transform[] points;
     int currentPoint = 0;
     Rigidbody2D rb;
+
     private void Start()
     {
         points = FindFirstObjectByType<PointsList>().points;
@@ -37,6 +38,12 @@ public class EnemyAI : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+    private void Update()
+    {
+        float step = speed * Time.deltaTime;
+        distanceTravelled += step;
     }
 
 }

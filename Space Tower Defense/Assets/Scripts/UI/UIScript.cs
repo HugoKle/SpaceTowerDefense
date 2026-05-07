@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class UIScript : MonoBehaviour
@@ -13,6 +14,7 @@ public class UIScript : MonoBehaviour
 
     List<Button> towerSlots = new List<Button>();
     TowerController towerController;
+    InfoScript info;
 
     private UIDocument _document;
     DamageVignette damageVignette;
@@ -29,6 +31,7 @@ public class UIScript : MonoBehaviour
     private void Start()
     {
         towerController = FindFirstObjectByType<TowerController>();
+        info = FindFirstObjectByType<InfoScript>();
 
         VisualElement root = _document.rootVisualElement;
         healthLabel = root.Q<Label>("Health");
@@ -78,6 +81,8 @@ public class UIScript : MonoBehaviour
 
             int index = i - 1; 
             currentSlot.RegisterCallback<ClickEvent>(evt => OnTowerSlotClicked(index));
+            currentSlot.RegisterCallback<MouseEnterEvent>(evt => info.ShowInfo(towers[index].towerPrefab.GetComponent<TowerScript>()));
+            currentSlot.RegisterCallback<MouseLeaveEvent>(evt => info.HideInfo());
 
         }
     }
@@ -159,6 +164,26 @@ public class UIScript : MonoBehaviour
         {
             waveLabel.text = "Wave: " + wave;
         }
+    }
+
+    public bool IsPointerOverUIToolkit()
+    {
+        Vector2 mousePos = Mouse.current.position.ReadValue();
+        Vector2 uiPos = new Vector2(mousePos.x, Screen.height - mousePos.y);
+
+        VisualElement picked = mainHotbar.panel.Pick(uiPos);
+
+        if (picked == null) return false;
+
+        VisualElement current = picked;
+        while (current != null)
+        {
+            if (current == mainHotbar || current == specialHotbar)
+                return true;
+            current = current.parent;
+        }
+
+        return false;
     }
 
 }

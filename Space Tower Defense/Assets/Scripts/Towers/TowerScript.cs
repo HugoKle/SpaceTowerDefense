@@ -6,7 +6,7 @@ public class TowerScript : MonoBehaviour
     [SerializeField] LayerMask collLayers;
     public int towerIndex = 0;
     public int currentLevel = 0;
-
+    public int value = 0;
 
     Rigidbody2D rb;
     bool isTouchingPath = false;
@@ -31,10 +31,11 @@ public class TowerScript : MonoBehaviour
 
         
         int wealth = gameUI.GetMoney();
-        if (isTouchingPath || wealth < towerLevels[0].Price) { return false; }
+        if (isTouchingPath || wealth < towerLevels[0].Price || gameUI.IsPointerOverUIToolkit()) { return false; }
 
         isPlaced = true;
         gameUI.AddMoney(-towerLevels[0].Price);
+        value += towerLevels[0].Price;
         sr.enabled = false;
         SpawnTower(0);
 
@@ -53,8 +54,11 @@ public class TowerScript : MonoBehaviour
         int wealth = gameUI.GetMoney();
         if (wealth < towerLevels[currentLevel + 1].Price) { return; }
         currentLevel++;
+        value += towerLevels[currentLevel].Price;
         gameUI.AddMoney(-towerLevels[currentLevel].Price);
         SpawnTower(currentLevel);
+
+        GetComponentInChildren<rangeScript>().gameObject.transform.localScale = Vector3.one * towerLevels[currentLevel].towerRange * 2f;
     }
 
 
@@ -90,5 +94,9 @@ public class TowerScript : MonoBehaviour
         currentTower = Instantiate(towerLevels[towerIndex].towerPrefab, transform.position, Quaternion.identity);
     }
 
+    public float GetRange()
+    {
+        return towerLevels[currentLevel].towerRange;
+    }
 
 }

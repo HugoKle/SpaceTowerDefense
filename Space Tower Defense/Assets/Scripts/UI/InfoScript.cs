@@ -30,6 +30,9 @@ public class InfoScript : MonoBehaviour
         upgradeButton.RegisterCallback<ClickEvent>(evt => tower.UpgradeTower());
         upgradeButton.RegisterCallback<ClickEvent>(evt => UpdateInfo());
 
+        Button sellButton = root.Q<Button>("SellButton");
+        sellButton.RegisterCallback<ClickEvent>(evt => SellTower());
+
         towerName = root.Q<Label>("TowerName");
         description = root.Q<Label>("Description");
         stats = root.Q<Label>("Stats");
@@ -43,7 +46,18 @@ public class InfoScript : MonoBehaviour
     {
         panel.style.display = DisplayStyle.Flex;
 
+        if (tower != null)
+        {
+            rangeScript range = tower.GetComponentInChildren<rangeScript>();
+            if (range != null)
+            {
+                range.HideVisual();
+            }
+        }
+
         tower = selectedTower;
+
+        
 
         UpdateInfo();
     }
@@ -61,16 +75,40 @@ public class InfoScript : MonoBehaviour
             $"Range: {tower.towerLevels[towerLevel].towerRange}\n" +
             $"Fire Rate: {tower.towerLevels[towerLevel].towerAttackSpeed}";
 
-        upgradeStats.text =  $"Damage: {tower.towerLevels[towerLevel + 1].towerDamage}\n" +
-            $"Range: {tower.towerLevels[towerLevel + 1].towerRange}\n" +
-            $"Fire Rate: {tower.towerLevels[towerLevel + 1].towerAttackSpeed}";
+       
 
-        upgradeButton.text = $"Upgrade (${tower.towerLevels[towerLevel + 1].Price})";
+        if (towerLevel + 1 >= tower.towerLevels.Length)
+        {
+            upgradeButton.text = "Max Level";
+            upgradeStats.text = "Max Level";
+            upgradeButton.SetEnabled(false);
+        }
+        else
+        {
+            upgradeButton.SetEnabled(true);
+            upgradeButton.text = $"Upgrade (${tower.towerLevels[towerLevel + 1].Price})";
+
+            upgradeStats.text =  $"Damage: {tower.towerLevels[towerLevel + 1].towerDamage}\n" +
+           $"Range: {tower.towerLevels[towerLevel + 1].towerRange}\n" +
+           $"Fire Rate: {tower.towerLevels[towerLevel + 1].towerAttackSpeed}";
+        }
+
+       
+       
     }
 
     public void HideInfo()
     {
         panel.style.display = DisplayStyle.None;
+        if (tower != null)
+        {
+            rangeScript range = tower.GetComponentInChildren<rangeScript>();
+            if (range != null)
+            {
+                range.HideVisual();
+            }
+        }
+
     }
 
     public bool IsPointerOverUIToolkit()
@@ -79,5 +117,14 @@ public class InfoScript : MonoBehaviour
         Vector2 uiPos = new Vector2(mousePos.x, Screen.height - mousePos.y);
         var picked = GetComponent<UIDocument>().rootVisualElement.panel.Pick(uiPos);
         return picked != null;
+    }
+
+    void SellTower()
+    {
+        if (tower == null) { return; }
+        int sellValue = (int)(tower.value / 1.25f);
+        gameUI.AddMoney(sellValue);
+        Destroy(tower.gameObject);
+        HideInfo();
     }
 }

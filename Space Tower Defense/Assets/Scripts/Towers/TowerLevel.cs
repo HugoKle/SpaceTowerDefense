@@ -6,5 +6,5 @@ public class TowerLevel
     public int Price;
     public int towerDamage;
     public int towerAttackSpeed;
-    public int towerRange;
+    public float towerRange;
 }

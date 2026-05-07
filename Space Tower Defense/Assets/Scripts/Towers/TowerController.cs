@@ -5,16 +5,27 @@ public class TowerController : MonoBehaviour
 {
     bool isPlacingTower = false;
     GameObject towerToPlace;
+    GameObject currentVisual;
     InfoScript info;
-     private void Start()
+    UIScript gameUI;
+    [SerializeField] LayerMask towerLayerMask;
+    [SerializeField] GameObject visualPrefab;  
+    private void Start()
     {
         info = FindFirstObjectByType<InfoScript>();
+        gameUI = FindFirstObjectByType<UIScript>();
     }
 
     public void PlaceTower(GameObject towerPrefab, int towerIndex)
     {
+        if (isPlacingTower) { Destroy(towerToPlace); Destroy(currentVisual); }
+
         towerToPlace = Instantiate(towerPrefab);
         towerToPlace.GetComponent<TowerScript>().towerIndex = towerIndex;
+
+        currentVisual = Instantiate(visualPrefab, towerToPlace.transform.position, Quaternion.identity, towerToPlace.transform);
+        currentVisual.transform.localScale = Vector3.one * towerToPlace.GetComponent<TowerScript>().GetRange() * 2f;
+        
         isPlacingTower = true;
       
     }
@@ -24,7 +35,10 @@ public class TowerController : MonoBehaviour
         if (towerToPlace != null)
         {
             Destroy(towerToPlace);
+            Destroy(currentVisual);
+
             towerToPlace = null;
+            currentVisual = null;
         }
         isPlacingTower = false;
     }
@@ -50,10 +64,11 @@ public class TowerController : MonoBehaviour
         else
         {
           Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-          RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
+          RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, towerLayerMask);
             if (hit.collider != null && hit.collider.CompareTag("Tower"))
             {
                 info.ShowInfo(hit.collider.GetComponent<TowerScript>());
+                hit.collider.gameObject.GetComponentInChildren<rangeScript>().ShowVisual();
             }
             else if (!info.IsPointerOverUIToolkit())
             {

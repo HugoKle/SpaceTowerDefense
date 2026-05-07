@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 27c6e029cc63a134abb47e4991d089c7
+guid: 319c6148c5b867440828710795040171
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2319203269028800248
-    second: Mercury1_0
+      213: 1248784056254802929
+    second: image (3)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mercury1_0
+      name: image (3)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8091d9b1ae880dfd0800000000000000
-      internalID: -2319203269028800248
+      spriteID: 1fb2d3a9b72945110800000000000000
+      internalID: 1248784056254802929
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mercury1_0: -2319203269028800248
+      image (3)_0: 1248784056254802929
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
