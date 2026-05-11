@@ -1,17 +1,27 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] float speed = 2f;
+    [SerializeField] public float speed = 2f;
     [SerializeField] int damage = 1;
 
     public float distanceTravelled = 0f;
     Transform[] points;
     int currentPoint = 0;
     Rigidbody2D rb;
+    bool isSlowed = false;
+    bool isStunned = false;
 
     private void Start()
     {
+        int currentWave = FindFirstObjectByType<UIScript>().GetWave();
+        if (currentWave > 15)
+        {
+            speed += (currentWave - 15) * 0.5f;
+            damage += (currentWave - 15) / 2;
+        }
+
         points = FindFirstObjectByType<PointsList>().points;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -44,6 +54,41 @@ public class EnemyAI : MonoBehaviour
     {
         float step = speed * Time.deltaTime;
         distanceTravelled += step;
+    }
+
+    public void ReduceSpeed(float multiplier, float duration)
+    {
+        if (!isSlowed)
+        {
+            StartCoroutine(ReduceSpeedCoroutine(multiplier, duration));
+        }
+    }
+
+    IEnumerator ReduceSpeedCoroutine(float multiplier, float duration)
+    {
+        float originalSpeed = speed;
+        speed *= multiplier;
+        isSlowed = true;
+        yield return new WaitForSeconds(duration);
+        speed = originalSpeed;
+        isSlowed = false;
+    }
+    public void StunEnemy(float duration)
+    {
+        if (!isStunned)
+        {
+            StartCoroutine(Stun(duration));
+        }
+    }
+
+    IEnumerator Stun(float duration)
+    {
+        float originalSpeed = speed;
+        speed = 0f;
+        isStunned = true;
+        yield return new WaitForSeconds(duration);
+        speed = originalSpeed;
+        isStunned = false;
     }
 
 }

@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.49397, y: 0.74884, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aad635ce315a0b644994682effac4865, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,7 +128,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.3
 --- !u!114 &4871015885354831500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,36 +142,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   towerLevels:
-  - towerPrefab: {fileID: 0}
-    Price: 100
+  - towerPrefab: {fileID: 2490136591588350765, guid: bd91a370fdd60bd4eb48d6a2c9ef9b05, type: 3}
+    Price: 360
+    towerDamage: 6
+    towerAttackSpeed: 0
+    towerRange: 1.5
+  - towerPrefab: {fileID: 2490136591588350765, guid: 37799ba52d0e8f746835e6b14dcf52ca, type: 3}
+    Price: 640
+    towerDamage: 6
+    towerAttackSpeed: 0
+    towerRange: 1.5
+  - towerPrefab: {fileID: 2490136591588350765, guid: 3d1629c0ca8ab8d4bbcf1fab23a6a5bb, type: 3}
+    Price: 725
+    towerDamage: 10
+    towerAttackSpeed: 0
+    towerRange: 1.5
+  - towerPrefab: {fileID: 2490136591588350765, guid: d5433f61c3a3bc54393cb8c2e7d82c61, type: 3}
+    Price: 1230
+    towerDamage: 12
+    towerAttackSpeed: 0
+    towerRange: 1.5
+  - towerPrefab: {fileID: 2490136591588350765, guid: 207eec9fb9306ee4dbac1cf91ad96995, type: 3}
+    Price: 2300
     towerDamage: 0
     towerAttackSpeed: 0
-    towerRange: 0
-  - towerPrefab: {fileID: 0}
-    Price: 0
-    towerDamage: 0
-    towerAttackSpeed: 0
-    towerRange: 0
-  - towerPrefab: {fileID: 0}
-    Price: 0
-    towerDamage: 0
-    towerAttackSpeed: 0
-    towerRange: 0
-  - towerPrefab: {fileID: 0}
-    Price: 0
-    towerDamage: 0
-    towerAttackSpeed: 0
-    towerRange: 0
-  - towerPrefab: {fileID: 0}
-    Price: 0
-    towerDamage: 0
-    towerAttackSpeed: 0
-    towerRange: 0
+    towerRange: 2
   collLayers:
     serializedVersion: 2
     m_Bits: 136
   towerIndex: 0
   currentLevel: 0
+  value: 0
 --- !u!50 &4539259478610746062
 Rigidbody2D:
   serializedVersion: 5

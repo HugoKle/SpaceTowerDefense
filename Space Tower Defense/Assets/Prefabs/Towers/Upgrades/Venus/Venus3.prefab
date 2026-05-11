@@ -103,10 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46afbe202db88444971a12a3168eaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  damage: 2
-  attackspeed: 12
-  attackInterval: 0.1
+  damage: 1
+  attackspeed: 7
+  attackInterval: 0.15
   range: 2
   attackEffect: {fileID: 2659457272446482872, guid: 5cf8775c5ce016e40876989a168832d7, type: 3}
-  radius: 1.5
-  duration: 4
+  radius: 1.4
+  duration: 3

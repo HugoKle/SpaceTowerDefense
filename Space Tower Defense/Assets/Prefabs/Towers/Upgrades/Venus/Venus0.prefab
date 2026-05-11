@@ -104,8 +104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   damage: 1
-  attackspeed: 5
-  attackInterval: 0.15
+  attackspeed: 2
+  attackInterval: 0.3
   range: 1
   attackEffect: {fileID: 2659457272446482872, guid: 5cf8775c5ce016e40876989a168832d7, type: 3}
   radius: 0.8

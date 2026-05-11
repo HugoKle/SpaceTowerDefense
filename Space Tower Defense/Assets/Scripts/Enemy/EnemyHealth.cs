@@ -9,6 +9,11 @@ public class EnemyHealth : MonoBehaviour
 
     private void Start()
     {
+        int currentWave = FindFirstObjectByType<UIScript>().GetWave();
+        if (currentWave > 15)
+        {
+            maxHealth += (currentWave - 10) * (currentWave - 10);
+        }
         currentHealth = maxHealth;
     }
 

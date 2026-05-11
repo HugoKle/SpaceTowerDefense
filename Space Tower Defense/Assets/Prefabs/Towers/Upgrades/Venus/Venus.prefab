@@ -145,33 +145,34 @@ MonoBehaviour:
   - towerPrefab: {fileID: 5379009713879897781, guid: e84413aaaeeb0674bb0e9f2f58e3aefe, type: 3}
     Price: 200
     towerDamage: 1
-    towerAttackSpeed: 5
+    towerAttackSpeed: 2
     towerRange: 1
   - towerPrefab: {fileID: 5379009713879897781, guid: 4c1ac013ac033b2498d130145204fcc4, type: 3}
     Price: 250
-    towerDamage: 2
-    towerAttackSpeed: 7
+    towerDamage: 1
+    towerAttackSpeed: 4
     towerRange: 1.2
   - towerPrefab: {fileID: 5379009713879897781, guid: 3c608ef132f85224db4d9efc237b8e08, type: 3}
     Price: 300
-    towerDamage: 2
-    towerAttackSpeed: 10
+    towerDamage: 1
+    towerAttackSpeed: 6
     towerRange: 1.5
   - towerPrefab: {fileID: 5379009713879897781, guid: 6b07fe4dcf53c9142a705d0333dcf933, type: 3}
     Price: 600
-    towerDamage: 2
-    towerAttackSpeed: 12
+    towerDamage: 1
+    towerAttackSpeed: 10
     towerRange: 2
   - towerPrefab: {fileID: 5379009713879897781, guid: b63643cb06426fe4f89400f1a33288ea, type: 3}
     Price: 2050
-    towerDamage: 3
-    towerAttackSpeed: 15
+    towerDamage: 2
+    towerAttackSpeed: 10
     towerRange: 2
   collLayers:
     serializedVersion: 2
     m_Bits: 136
   towerIndex: 1
   currentLevel: 0
+  value: 0
 --- !u!50 &403789417324258664
 Rigidbody2D:
   serializedVersion: 5

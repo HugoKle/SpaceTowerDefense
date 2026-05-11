@@ -14,6 +14,7 @@ public class InfoScript : MonoBehaviour
     Label upgradeStats;
     VisualElement towerIcon;
     Button upgradeButton;
+    Button sellButton;
     VisualElement panel;
 
 
@@ -30,7 +31,7 @@ public class InfoScript : MonoBehaviour
         upgradeButton.RegisterCallback<ClickEvent>(evt => tower.UpgradeTower());
         upgradeButton.RegisterCallback<ClickEvent>(evt => UpdateInfo());
 
-        Button sellButton = root.Q<Button>("SellButton");
+        sellButton = root.Q<Button>("SellButton");
         sellButton.RegisterCallback<ClickEvent>(evt => SellTower());
 
         towerName = root.Q<Label>("TowerName");
@@ -44,6 +45,7 @@ public class InfoScript : MonoBehaviour
 
     public void ShowInfo(TowerScript selectedTower)
     {
+        tower = selectedTower;
         panel.style.display = DisplayStyle.Flex;
 
         if (tower != null)
@@ -55,7 +57,7 @@ public class InfoScript : MonoBehaviour
             }
         }
 
-        tower = selectedTower;
+        
 
         
 
@@ -93,8 +95,10 @@ public class InfoScript : MonoBehaviour
            $"Fire Rate: {tower.towerLevels[towerLevel + 1].towerAttackSpeed}";
         }
 
-       
-       
+        sellButton.text = $"Sell (${(int)(tower.value / 1.25f)})";
+
+
+
     }
 
     public void HideInfo()

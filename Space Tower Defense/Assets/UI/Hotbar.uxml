@@ -2,25 +2,39 @@
     <Style src="project://database/Assets/UI/UI.uss?fileID=7433441132597879392&amp;guid=6b0a9da0bc171b94ca8fef71b64679ef&amp;type=3#UI" />
     <ui:VisualElement name="Hotbar" style="flex-grow: 1; max-height: 120px; height: 120px; min-height: 120px; position: absolute; bottom: 38px; width: 777px; border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-left-color: rgb(236, 113, 249); border-right-color: rgb(236, 113, 249); border-top-color: rgb(236, 113, 249); border-bottom-color: rgb(236, 113, 249); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; left: auto; flex-direction: row; background-color: rgb(236, 113, 249); align-self: center;">
         <ui:Button text="Button" name="Tower1" class="Button">
-            <ui:VisualElement name="TowerVisual1" class="TowerVisual" style="flex-grow: 1; background-size: 100% 100%;" />
+            <ui:VisualElement name="TowerVisual1" class="TowerVisual" style="flex-grow: 1; background-size: 100% 100%;">
+                <ui:Label text="$10000" name="TowerText1" class="Text" style="color: rgb(255, 255, 255); font-size: 20px;" />
+            </ui:VisualElement>
         </ui:Button>
         <ui:Button text="Button" name="Tower2" class="Button">
-            <ui:VisualElement name="TowerVisual2" class="TowerVisual" style="flex-grow: 1;" />
+            <ui:VisualElement name="TowerVisual2" class="TowerVisual" style="flex-grow: 1;">
+                <ui:Label text="$10000" name="TowerText2" class="Text" style="color: rgb(255, 255, 255); font-size: 20px;" />
+            </ui:VisualElement>
         </ui:Button>
         <ui:Button text="Button" name="Tower3" class="Button">
-            <ui:VisualElement name="TowerVisual3" class="TowerVisual" style="flex-grow: 1;" />
+            <ui:VisualElement name="TowerVisual3" class="TowerVisual" style="flex-grow: 1;">
+                <ui:Label text="$10000" name="TowerText3" class="Text" style="color: rgb(255, 255, 255); font-size: 20px;" />
+            </ui:VisualElement>
         </ui:Button>
         <ui:Button text="Button" name="Tower4" class="Button">
-            <ui:VisualElement name="TowerVisual4" class="TowerVisual" style="flex-grow: 1;" />
+            <ui:VisualElement name="TowerVisual4" class="TowerVisual" style="flex-grow: 1;">
+                <ui:Label text="$10000" name="TowerText4" class="Text" style="color: rgb(255, 255, 255); font-size: 20px;" />
+            </ui:VisualElement>
         </ui:Button>
         <ui:Button text="Button" name="Tower5" class="Button">
-            <ui:VisualElement name="TowerVisual5" class="TowerVisual" style="flex-grow: 1;" />
+            <ui:VisualElement name="TowerVisual5" class="TowerVisual" style="flex-grow: 1;">
+                <ui:Label text="$10000" name="TowerText5" class="Text" style="color: rgb(255, 255, 255); font-size: 20px;" />
+            </ui:VisualElement>
         </ui:Button>
         <ui:Button text="Button" name="Tower6" class="Button">
-            <ui:VisualElement name="TowerVisual6" class="TowerVisual" style="flex-grow: 1;" />
+            <ui:VisualElement name="TowerVisual6" class="TowerVisual" style="flex-grow: 1;">
+                <ui:Label text="$10000" name="TowerText6" class="Text" style="color: rgb(255, 255, 255); font-size: 20px;" />
+            </ui:VisualElement>
         </ui:Button>
         <ui:Button text="Button" name="Tower7" class="Button">
-            <ui:VisualElement name="TowerVisual7" class="TowerVisual" style="flex-grow: 1;" />
+            <ui:VisualElement name="TowerVisual7" class="TowerVisual" style="flex-grow: 1;">
+                <ui:Label text="$10000" name="TowerText7" class="Text" style="color: rgb(255, 255, 255); font-size: 20px;" />
+            </ui:VisualElement>
         </ui:Button>
     </ui:VisualElement>
 </ui:UXML>

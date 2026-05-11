@@ -40,19 +40,21 @@ public class UIScript : MonoBehaviour
         mainHotbar = root.Q<VisualElement>("Basic");
         specialHotbar = root.Q<VisualElement>("Specials");
         Button swapButton = root.Q<Button>("Swap");
-       
+        Button speedButton = root.Q<Button>("SpeedButton");
 
         specialHotbar.style.display = DisplayStyle.None;
 
-        AssignSlots();
 
-
+      
         swapButton.RegisterCallback<ClickEvent>(evt => SwapTowers());
+        speedButton.RegisterCallback<ClickEvent>(evt => Time.timeScale = Time.timeScale < 2f ? 3f : 1f);
+
+       
 
         AddMoney(startingCash);
 
-
-
+        AssignSlots();
+      
     }
 
     void AssignSlots()
@@ -61,29 +63,45 @@ public class UIScript : MonoBehaviour
         {
             Button currentSlot;
             VisualElement towerIcon;
+            Label towerText;
             if (i > 7)
             {
                 currentSlot = specialHotbar.Q<Button>("Tower" + (i - 7));
                 towerIcon = specialHotbar.Q<VisualElement>("TowerVisual" + (i - 7));
+                towerText = specialHotbar.Q<Label>("TowerText" + (i - 7));
             }
             else
             {
                 currentSlot = mainHotbar.Q<Button>("Tower" + i);
                 towerIcon = mainHotbar.Q<VisualElement>("TowerVisual" + i);
+                towerText = mainHotbar.Q<Label>("TowerText" + i);
+
             }
 
             if (currentSlot == null) { Debug.LogWarning($"Tower{i} not found"); continue; }
 
+            if (towers[i - 1].towerPrefab == null)
+            {
+                Debug.LogWarning($"Tower {i} has no prefab assigned!");
+                continue;
+            }
 
             towerIcon.style.backgroundImage = towers[i - 1].towerIcon;
 
             towerSlots.Add(currentSlot);
 
-            int index = i - 1; 
+            int index = i - 1;
+            TowerScript towerScript = towers[index].towerPrefab.GetComponent<TowerScript>();
+
             currentSlot.RegisterCallback<ClickEvent>(evt => OnTowerSlotClicked(index));
-            currentSlot.RegisterCallback<MouseEnterEvent>(evt => info.ShowInfo(towers[index].towerPrefab.GetComponent<TowerScript>()));
+            currentSlot.RegisterCallback<MouseEnterEvent>(evt => info.ShowInfo(towerScript));
             currentSlot.RegisterCallback<MouseLeaveEvent>(evt => info.HideInfo());
 
+            
+            if (towerScript != null)
+            {
+                towerText.text = "$" + towerScript.towerLevels[0].Price;
+            }
         }
     }
 
@@ -164,6 +182,19 @@ public class UIScript : MonoBehaviour
         {
             waveLabel.text = "Wave: " + wave;
         }
+    }
+
+    public int GetWave()
+    {
+        if (waveLabel != null)
+        {
+            string waveText = waveLabel.text.Replace("Wave: ", "");
+            if (int.TryParse(waveText, out int currentWave))
+            {
+                return currentWave;
+            }
+        }
+        return 0;
     }
 
     public bool IsPointerOverUIToolkit()
