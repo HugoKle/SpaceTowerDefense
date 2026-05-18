@@ -148,22 +148,22 @@ MonoBehaviour:
     towerAttackSpeed: 2
     towerRange: 1
   - towerPrefab: {fileID: 5379009713879897781, guid: 4c1ac013ac033b2498d130145204fcc4, type: 3}
-    Price: 250
+    Price: 777
     towerDamage: 1
     towerAttackSpeed: 4
     towerRange: 1.2
   - towerPrefab: {fileID: 5379009713879897781, guid: 3c608ef132f85224db4d9efc237b8e08, type: 3}
-    Price: 300
+    Price: 2026
     towerDamage: 1
     towerAttackSpeed: 6
     towerRange: 1.5
   - towerPrefab: {fileID: 5379009713879897781, guid: 6b07fe4dcf53c9142a705d0333dcf933, type: 3}
-    Price: 600
+    Price: 2300
     towerDamage: 1
     towerAttackSpeed: 10
     towerRange: 2
   - towerPrefab: {fileID: 5379009713879897781, guid: b63643cb06426fe4f89400f1a33288ea, type: 3}
-    Price: 2050
+    Price: 12345
     towerDamage: 2
     towerAttackSpeed: 10
     towerRange: 2

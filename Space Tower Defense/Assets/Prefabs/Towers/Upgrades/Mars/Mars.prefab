@@ -148,29 +148,29 @@ MonoBehaviour:
     towerAttackSpeed: 0
     towerRange: 1.5
   - towerPrefab: {fileID: 2490136591588350765, guid: 37799ba52d0e8f746835e6b14dcf52ca, type: 3}
-    Price: 640
+    Price: 850
     towerDamage: 6
     towerAttackSpeed: 0
     towerRange: 1.5
   - towerPrefab: {fileID: 2490136591588350765, guid: 3d1629c0ca8ab8d4bbcf1fab23a6a5bb, type: 3}
-    Price: 725
+    Price: 1023
     towerDamage: 10
     towerAttackSpeed: 0
     towerRange: 1.5
   - towerPrefab: {fileID: 2490136591588350765, guid: d5433f61c3a3bc54393cb8c2e7d82c61, type: 3}
-    Price: 1230
+    Price: 2050
     towerDamage: 12
     towerAttackSpeed: 0
     towerRange: 1.5
   - towerPrefab: {fileID: 2490136591588350765, guid: 207eec9fb9306ee4dbac1cf91ad96995, type: 3}
-    Price: 2300
+    Price: 6501
     towerDamage: 0
     towerAttackSpeed: 0
     towerRange: 2
   collLayers:
     serializedVersion: 2
     m_Bits: 136
-  towerIndex: 0
+  towerIndex: 2
   currentLevel: 0
   value: 0
 --- !u!50 &4539259478610746062

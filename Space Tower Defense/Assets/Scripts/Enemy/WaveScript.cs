@@ -26,7 +26,10 @@ public class WaveScript : MonoBehaviour
     {
         while (true)
         {
-            
+            if (gameUI.GetHealth() <= 0)
+            {
+                yield break;
+            }
 
             yield return null;
             yield return new WaitUntil(() => !isWaveActive);

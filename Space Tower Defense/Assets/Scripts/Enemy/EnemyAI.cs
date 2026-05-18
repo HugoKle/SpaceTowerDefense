@@ -16,10 +16,16 @@ public class EnemyAI : MonoBehaviour
     private void Start()
     {
         int currentWave = FindFirstObjectByType<UIScript>().GetWave();
-        if (currentWave > 15)
+        if (currentWave > 20)
         {
-            speed += (currentWave - 15) * 0.5f;
-            damage += (currentWave - 15) / 2;
+            
+             speed += (currentWave - 20) / 2;
+            
+            if (speed > 10)
+            {
+                speed = 10f;
+            }
+            damage += (currentWave - 20) / 2;
         }
 
         points = FindFirstObjectByType<PointsList>().points;

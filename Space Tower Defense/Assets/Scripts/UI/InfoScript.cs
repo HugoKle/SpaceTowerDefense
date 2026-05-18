@@ -45,8 +45,6 @@ public class InfoScript : MonoBehaviour
 
     public void ShowInfo(TowerScript selectedTower)
     {
-        tower = selectedTower;
-        panel.style.display = DisplayStyle.Flex;
 
         if (tower != null)
         {
@@ -57,6 +55,11 @@ public class InfoScript : MonoBehaviour
             }
         }
 
+        tower = selectedTower;
+        panel.style.display = DisplayStyle.Flex;
+
+        
+
         
 
         
@@ -66,6 +69,7 @@ public class InfoScript : MonoBehaviour
 
     void UpdateInfo()
     {
+        Debug.Log(tower.name);
         int index = tower.towerIndex;
         int towerLevel = tower.currentLevel;
 
@@ -97,7 +101,7 @@ public class InfoScript : MonoBehaviour
 
         sellButton.text = $"Sell (${(int)(tower.value / 1.25f)})";
 
-
+        
 
     }
 

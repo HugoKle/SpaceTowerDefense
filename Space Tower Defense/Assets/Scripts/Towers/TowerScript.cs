@@ -29,12 +29,7 @@ public class TowerScript : MonoBehaviour
             gameUI = FindFirstObjectByType<UIScript>();
         }
 
-        rangeScript range = GetComponentInChildren<rangeScript>();
-        if (range != null)
-        {
-            range.HideVisual();
-        }
-
+        
 
         int wealth = gameUI.GetMoney();
         if (isTouchingPath || wealth < towerLevels[0].Price || gameUI.IsPointerOverUIToolkit()) { return false; }
@@ -44,6 +39,13 @@ public class TowerScript : MonoBehaviour
         value += towerLevels[0].Price;
         sr.enabled = false;
         SpawnTower(0);
+
+        rangeScript range = GetComponentInChildren<rangeScript>();
+        if (range != null)
+        {
+            range.HideVisual();
+        }
+
 
         return true;
 

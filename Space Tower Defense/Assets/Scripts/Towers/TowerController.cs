@@ -18,7 +18,7 @@ public class TowerController : MonoBehaviour
 
     public void PlaceTower(GameObject towerPrefab, int towerIndex)
     {
-        if (isPlacingTower) { Destroy(towerToPlace); Destroy(currentVisual); }
+        if (isPlacingTower) { Destroy(towerToPlace); }
 
         towerToPlace = Instantiate(towerPrefab);
         towerToPlace.GetComponent<TowerScript>().towerIndex = towerIndex;

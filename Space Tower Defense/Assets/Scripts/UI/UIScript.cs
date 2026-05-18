@@ -57,6 +57,10 @@ public class UIScript : MonoBehaviour
       
     }
 
+    public void Hide()
+    {
+        _document.rootVisualElement.style.display = DisplayStyle.None;
+    }
     void AssignSlots()
     {
         for (int i = 1; i <= 14; i++)
@@ -153,7 +157,26 @@ public class UIScript : MonoBehaviour
                     damageVignette.ShowDamageVignette();
                 }
             }
+
+            if (currentHealth <= 0)
+            {
+                LoseScript loseScript = FindFirstObjectByType<LoseScript>();
+                if (loseScript != null)
+                {
+                    loseScript.ShowLoseScreen();
+                }
+            }
         }
+    }
+
+    public int GetHealth()
+    {
+        if (healthLabel != null)
+        {
+            int currentHealth = int.Parse(healthLabel.text);
+            return currentHealth;
+        }
+        return 0;
     }
 
     public void AddMoney(int amount)
@@ -199,6 +222,7 @@ public class UIScript : MonoBehaviour
 
     public bool IsPointerOverUIToolkit()
     {
+        // osäker
         Vector2 mousePos = Mouse.current.position.ReadValue();
         Vector2 uiPos = new Vector2(mousePos.x, Screen.height - mousePos.y);
 
@@ -215,6 +239,7 @@ public class UIScript : MonoBehaviour
         }
 
         return false;
+        // ------
     }
 
 }
